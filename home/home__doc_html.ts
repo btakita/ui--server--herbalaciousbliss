@@ -28,7 +28,7 @@ export function home__doc_html_({ ctx }:{ ctx:request_ctx_T }) {
 					'flex-col',
 					'items-center',
 					'justify-center',
-					'my-12')
+					'mb-12')
 			}, [])
 		)
 	}
