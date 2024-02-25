@@ -16,7 +16,7 @@ export function home__doc_html_({ ctx }:{ ctx:request_ctx_T }) {
 			}, [
 				site__header_({ ctx }),
 				home_link__section_(),
-				site__footer_({ })
+				site__footer_({ ctx })
 			])
 		])
 	)

@@ -95,7 +95,11 @@ export function layout__doc_html_({
 				title_(title),
 			]),
 			body_({
-				...(body__props ?? {})
+				...body__props,
+				class: class_(
+					'bg-white',
+					'dark:bg-gray-900',
+					body__props?.class)
 			}, [
 				raw_(`
 <!-- Google tag (gtag.js) -->
