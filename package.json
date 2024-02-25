@@ -25,6 +25,7 @@
 	"types": "index.ts",
 	"exports": {
 		".": "./index.ts",
+		"./astrolus": "./astrolus/index.ts",
 		"./home": "./home/index.ts",
 		"./layout": "./layout/index.ts",
 		"./package.json": "./package.json"
@@ -33,6 +34,7 @@
 		"*.d.ts",
 		"*.js",
 		"*.json",
+		"astrolus",
 		"home",
 		"layout"
 	],

@@ -29,9 +29,9 @@ export function layout__doc_html_({
 	og_image?:string
 }, ...children:tag_dom_T[]) {
 	canonical_url ??= request_url_(ctx).href
-	title ??= 'Brooke Brodack'
-	description ??= 'YouTubing since 2004'
-	author ??= 'Brooke Brodack'
+	title ??= 'Herbalicious Bliss'
+	description ??= 'Find your Herbal Bliss'
+	author ??= 'Herbalicious Bliss'
 	og_image ??= herbaliciousbliss_logo_webp
 	const social_image_url = new URL(og_image, request_url_(ctx).origin).href
 	assets = assets__new(assets_(ctx), assets)
@@ -67,13 +67,13 @@ export function layout__doc_html_({
 				meta_({ rel: 'preconnect', href: 'https://fonts.googleapis.com' }),
 				meta_({ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 1 }),
 				meta_({
-					href: 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;700&display=swap',
+					href: 'https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap',
 					rel: 'stylesheet'
 				}),
 				meta_({ name: 'theme-color', content: '' }),
 				link_({ rel: 'icon', type: 'image/webp', href: herbaliciousbliss_logo_webp }),
 				link_({ rel: 'canonical', href: canonical_url }),
-				link_({ rel: 'sitemap', href: '/sitemap-index.xml' }),
+				link_({ rel: 'sitemap', href: '/sitemap.xml' }),
 				google_site_verification
 				&& meta_({ name: 'google-site-verification', content: google_site_verification }),
 				...assets.css_a.map(href=>

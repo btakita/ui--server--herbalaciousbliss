@@ -6,7 +6,7 @@ export function home__doc_html_({ ctx }:{ ctx:request_ctx_T }) {
 	return (
 		layout__doc_html_({
 			ctx,
-			title: 'Brooke Brodack',
+			title: 'Herbalicious Bliss',
 			html_props: {
 				class: class_('home__doc_html'),
 			}
