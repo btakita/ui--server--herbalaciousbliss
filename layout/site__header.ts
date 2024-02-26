@@ -51,136 +51,129 @@ export function site__header_({
 					'lg:border-transparent')
 			}, [
 				container__div_({
-					class: class_('relative')
+					class: class_(
+						'left_side',
+						'relative',
+						'flex',
+						'flex-wrap',
+						'items-center',
+						'justify-between',
+						'gap-6',
+						'md:gap-0',
+						'py-3',
+						'md:py-4')
 				}, [
-					left_side__div_(),
+					nav_master__div_(),
 					account__button_({
 						class: class_(
 							'hidden',
 							'lg:block',
-							'absolute',
-							'top-1/2',
-							'right-0',
-							'-translate-y-1/2')
+							'relative',
+							'ml-auto')
 					}),
+					nav_layer_(),
+					navlinks__div_()
 				])
 			]),
 			...children
-		])
-	)
-	function left_side__div_() {
-		return (
+		]))
+	function nav_master__div_() {
+	  return (
 			div_({
 				class: class_(
-					'left_side',
 					'relative',
+					'z-20',
 					'flex',
-					'flex-wrap',
-					'items-center',
+					'w-full',
 					'justify-between',
-					'gap-6',
-					'md:gap-0',
-					'py-3',
-					'md:py-4')
+					'md:px-0',
+					'lg:w-max')
 			}, [
-				div_({
+				a_({
+					href: '/#home',
+					'aria-logo': 'logo',
 					class: class_(
-						'relative',
-						'z-20',
 						'flex',
-						'w-full',
-						'justify-between',
-						'md:px-0',
-						'lg:w-max')
+						'items-center',
+						'justify-center',
+						'space-x-2',
+						'text-2xl')
 				}, [
-					a_({
-						href: '/#home',
-						'aria-logo': 'logo',
-						class: class_(
-							'flex',
-							'items-center',
-							'justify-center',
-							'space-x-2',
-							'text-2xl')
-					}, [
-						div_({
-							class: class_(
-								'h-24',
-								'w-24',
-								'rounded-full',
-								'bg-no-repeat',
-								'bg-top',
-								'bg-contain'),
-							style: style_({
-								'background-image': style_url_(herbaliciousbliss_logo_webp)
-							})
-						}),
-						div_({
-							class: class_(
-								'mt-2',
-								'font-bold',
-								text_class)
-						}, site__title_(ctx))
-					]),
 					div_({
 						class: class_(
-							'relative',
-							'flex',
-							'items-center',
-							'lg:hidden')
-					}, [
-						button_({
-							id: 'menu_handle',
-							'aria-label': 'menu_handle',
-							'title': 'menu_handle',
-							class: class_(
-								'relative',
-								'-mr-6',
-								'p-6',
-								'group'),
-							/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__menu_handle__hyop} */
-							hyop: 'site__header__menu_handle__hyop'
-						}, [
-							heroicons_bars_3_({
-								class: class_(
-									'group-[.active]:hidden',
-									'h-6',
-									'w-6',
-									stroke_class)
-							}),
-							heroicons_x_mark_({
-								class: class_(
-									'hidden',
-									'group-[.active]:block',
-									'h-6',
-									'w-6',
-									stroke_class)
-							})
-						])
-					])
+							'h-24',
+							'w-24',
+							'rounded-full',
+							'bg-no-repeat',
+							'bg-top',
+							'bg-contain'),
+						style: style_({
+							'background-image': style_url_(herbaliciousbliss_logo_webp)
+						})
+					}),
+					div_({
+						class: class_(
+							'mt-2',
+							'font-bold',
+							text_class)
+					}, site__title_(ctx))
 				]),
-				div_({
-					id: 'nav_layer',
-					'aria-hidden': true,
+				button_({
+					id: 'menu_handle',
+					'aria-label': 'menu_handle',
+					'title': 'menu_handle',
 					class: class_(
+						'relative',
+						'flex',
+						'items-center',
 						'lg:hidden',
-						'fixed',
-						'inset-0',
-						'z-10',
-						'h-screen',
-						'w-screen',
-						'origin-bottom',
-						'scale-y-0',
-						'bg-white/70',
-						'dark:bg-gray-900/70',
-						'backdrop-blur-2xl',
-						'transition',
-						'duration-500'),
-					/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__nav_layer__hyop} */
-					hyop: 'site__header__nav_layer__hyop'
-				}),
-				navlinks__div_()
+						'-mr-6',
+						'p-6',
+						'group'),
+					/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__menu_handle__hyop} */
+					hyop: 'site__header__menu_handle__hyop'
+				}, [
+					heroicons_bars_3_({
+						class: class_(
+							'group-[.active]:hidden',
+							'h-6',
+							'w-6',
+							stroke_class)
+					}),
+					heroicons_x_mark_({
+						class: class_(
+							'hidden',
+							'group-[.active]:block',
+							'h-6',
+							'w-6',
+							stroke_class)
+					})
+				])
 			])
+		)
+	}
+	function nav_layer_() {
+	  return (
+			div_({
+				id: 'nav_layer',
+				'aria-hidden': true,
+				class: class_(
+					'lg:hidden',
+					'fixed',
+					'inset-0',
+					'z-10',
+					'h-screen',
+					'w-screen',
+					'origin-bottom',
+					'scale-y-0',
+					'bg-white/70',
+					'dark:bg-gray-900/70',
+					'backdrop-blur-2xl',
+					'transition',
+					'duration-500'),
+				/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__nav_layer__hyop} */
+				hyop: 'site__header__nav_layer__hyop'
+			})
 		)
 	}
 	function navlinks__div_() {
@@ -307,6 +300,23 @@ export function site__header_({
 					button_({
 						class: class_(
 							'absolute',
+							'lg:hidden',
+							'-top-4',
+							'-right-4',
+							'h-6',
+							'w-6'),
+						/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__navlinks_login__back__hyop} */
+						hyop: 'site__header__navlinks_login__back__hyop'
+					}, [
+						heroicons_uturn_left_({
+							class: stroke_class
+						})
+					]),
+					button_({
+						class: class_(
+							'absolute',
+							'hidden',
+							'lg:block',
 							'-top-4',
 							'-right-4',
 							'h-6',
@@ -314,7 +324,7 @@ export function site__header_({
 						/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__navlinks_login__close__hyop} */
 						hyop: 'site__header__navlinks_login__close__hyop'
 					}, [
-						heroicons_uturn_left_({
+						heroicons_x_mark_({
 							class: stroke_class
 						})
 					])
@@ -330,7 +340,7 @@ export function site__header_({
 		return (
 			button_({
 				class: class_(
-					'account__div',
+					'account__button',
 					'h-6',
 					'w-6',
 					_class),
