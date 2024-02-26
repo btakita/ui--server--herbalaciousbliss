@@ -2,7 +2,8 @@ import { container__div_ } from '@btakita/ui--any--herbaliciousbliss/container'
 import {
 	heroicons_bars_3_,
 	heroicons_user_circle_,
-	heroicons_uturn_left_, heroicons_x_mark_
+	heroicons_uturn_left_,
+	heroicons_x_mark_
 } from '@btakita/ui--any--herbaliciousbliss/icon'
 import { site__title_ } from '@rappstack/domain--server/site'
 import { class_, style_, style_url_ } from 'ctx-core/html'
@@ -45,7 +46,6 @@ export function site__header_({
 					'absolute',
 					'z-10',
 					'w-full',
-					'border-b',
 					'border-black/5',
 					'dark:border-white/5',
 					'lg:border-transparent')
@@ -54,7 +54,7 @@ export function site__header_({
 					class: class_('relative')
 				}, [
 					left_side__div_(),
-					account__div_({
+					account__button_({
 						class: class_(
 							'hidden',
 							'lg:block',
@@ -219,7 +219,7 @@ export function site__header_({
 					/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__navlinks_menu__hyop} */
 					hyop: 'site__header__navlinks_menu__hyop'
 				}, [
-					account__div_({
+					account__button_({
 						class: class_(
 							'absolute',
 							'-top-4',
@@ -309,7 +309,6 @@ export function site__header_({
 							'absolute',
 							'-top-4',
 							'-right-4',
-							'border-none',
 							'h-6',
 							'w-6'),
 						/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__navlinks_login__close__hyop} */
@@ -323,20 +322,20 @@ export function site__header_({
 			])
 		)
 	}
-	function account__div_({
+	function account__button_({
 		class: _class
 	}:{
 		class?:string
 	}) {
 		return (
-			div_({
+			button_({
 				class: class_(
 					'account__div',
 					'h-6',
 					'w-6',
 					_class),
-				/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__account__div__hyop} */
-				hyop: 'site__header__account__div__hyop'
+				/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__account__button__hyop} */
+				hyop: 'site__header__account__button__hyop'
 			}, [
 				heroicons_user_circle_({
 					class: class_(
