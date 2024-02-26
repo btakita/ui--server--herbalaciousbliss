@@ -26,6 +26,7 @@
 	"exports": {
 		".": "./index.ts",
 		"./astrolus": "./astrolus/index.ts",
+		"./css": "./css/index.ts",
 		"./home": "./home/index.ts",
 		"./layout": "./layout/index.ts",
 		"./package.json": "./package.json"
@@ -35,6 +36,7 @@
 		"*.js",
 		"*.json",
 		"astrolus",
+		"css",
 		"home",
 		"layout"
 	],

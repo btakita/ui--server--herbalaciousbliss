@@ -1,10 +1,15 @@
 import { container__div_ } from '@btakita/ui--any--herbaliciousbliss/container'
-import { heroicons_user_circle_, heroicons_uturn_left_ } from '@btakita/ui--any--herbaliciousbliss/icon'
+import {
+	heroicons_bars_3_,
+	heroicons_user_circle_,
+	heroicons_uturn_left_, heroicons_x_mark_
+} from '@btakita/ui--any--herbaliciousbliss/icon'
 import { site__title_ } from '@rappstack/domain--server/site'
 import { class_, style_, style_url_ } from 'ctx-core/html'
 import { type tag_dom_T } from 'relementjs'
 import { a_, button_, div_, header_, li_, nav_, span_, ul_ } from 'relementjs/html'
 import { type request_ctx_T } from 'relysjs/server'
+import { stroke_class, text_class } from '../css/index.js'
 import herbaliciousbliss_logo_webp from '../public/asset/image/herbaliciousbliss-logo.webp'
 export function site__header_({
 	ctx,
@@ -114,8 +119,7 @@ export function site__header_({
 							class: class_(
 								'mt-2',
 								'font-bold',
-								'text-gray-900',
-								'dark:text-white')
+								text_class)
 						}, site__title_(ctx))
 					]),
 					div_({
@@ -126,42 +130,31 @@ export function site__header_({
 							'lg:hidden')
 					}, [
 						button_({
-							id: 'hamburger',
-							'aria-label': 'hamburger',
-							'title': 'hamburger',
+							id: 'menu_handle',
+							'aria-label': 'menu_handle',
+							'title': 'menu_handle',
 							class: class_(
 								'relative',
 								'-mr-6',
-								'p-6'),
-							/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__hamburger__hyop} */
-							hyop: 'site__header__hamburger__hyop'
+								'p-6',
+								'group'),
+							/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__menu_handle__hyop} */
+							hyop: 'site__header__menu_handle__hyop'
 						}, [
-							div_({
-								'aria-hidden': true,
-								id: 'line',
+							heroicons_bars_3_({
 								class: class_(
-									'm-auto',
-									'h-0.5',
-									'w-5',
-									'rounded',
-									'bg-sky-900',
-									'dark:bg-gray-300',
-									'transition',
-									'duration-300')
+									'group-[.active]:hidden',
+									'h-6',
+									'w-6',
+									stroke_class)
 							}),
-							div_({
-								'aria-hidden': true,
-								id: 'line',
+							heroicons_x_mark_({
 								class: class_(
-									'm-auto',
-									'mt-2',
-									'h-0.5',
-									'w-5',
-									'rounded',
-									'bg-sky-900',
-									'dark:bg-gray-300',
-									'transition',
-									'duration-300')
+									'hidden',
+									'group-[.active]:block',
+									'h-6',
+									'w-6',
+									stroke_class)
 							})
 						])
 					])
@@ -191,7 +184,7 @@ export function site__header_({
 		)
 	}
 	function navlinks__div_() {
-	  return (
+		return (
 			div_({
 				id: 'navlinks',
 				class: class_(
@@ -323,9 +316,7 @@ export function site__header_({
 						hyop: 'site__header__navlinks_login__close__hyop'
 					}, [
 						heroicons_uturn_left_({
-							class: class_(
-								'stroke-gray-900',
-								'dark:stroke-white')
+							class: stroke_class
 						})
 					])
 				])
