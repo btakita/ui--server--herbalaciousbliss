@@ -1,5 +1,5 @@
 import { container__div_ } from '@btakita/ui--any--herbaliciousbliss/container'
-import { heroicons_user_circle_ } from '@btakita/ui--any--herbaliciousbliss/icon'
+import { heroicons_user_circle_, heroicons_x_mark_ } from '@btakita/ui--any--herbaliciousbliss/icon'
 import { site__title_ } from '@rappstack/domain--server/site'
 import { class_, style_, style_url_ } from 'ctx-core/html'
 import { type tag_dom_T } from 'relementjs'
@@ -34,8 +34,6 @@ export function site__header_({
 			class: class_(
 				'site__header',
 				_class),
-			/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__hyop} */
-			hyop: 'site__header__hyop'
 		}, [
 			nav_({
 				class: class_(
@@ -134,7 +132,9 @@ export function site__header_({
 							class: class_(
 								'relative',
 								'-mr-6',
-								'p-6')
+								'p-6'),
+							/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__hamburger__hyop} */
+							hyop: 'site__header__hamburger__hyop'
 						}, [
 							div_({
 								'aria-hidden': true,
@@ -182,39 +182,55 @@ export function site__header_({
 						'dark:bg-gray-900/70',
 						'backdrop-blur-2xl',
 						'transition',
-						'duration-500')
+						'duration-500'),
+					/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__nav_layer__hyop} */
+					hyop: 'site__header__nav_layer__hyop'
 				}),
+				navlinks__div_()
+			])
+		)
+	}
+	function navlinks__div_() {
+	  return (
+			div_({
+				id: 'navlinks',
+				class: class_(
+					'invisible',
+					'absolute',
+					'top-full',
+					'left-0',
+					'z-20',
+					'w-full',
+					'origin-top-right',
+					'translate-y-1',
+					'scale-90',
+					'flex-col',
+					'flex-wrap',
+					'justify-end',
+					'gap-6',
+					'rounded-3xl',
+					'border',
+					'border-gray-100',
+					'bg-white',
+					'dark:bg-gray-900',
+					'p-8',
+					'opacity-0',
+					'shadow-2xl',
+					'shadow-gray-600'),
+				/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__navlinks__hyop} */
+				hyop: 'site__header__navlinks__hyop'
+			}, [
 				div_({
-					id: 'navlinks',
-					class: class_(
-						'invisible',
-						'absolute',
-						'top-full',
-						'left-0',
-						'z-20',
-						'w-full',
-						'origin-top-right',
-						'translate-y-1',
-						'scale-90',
-						'flex-col',
-						'flex-wrap',
-						'justify-end',
-						'gap-6',
-						'rounded-3xl',
-						'border',
-						'border-gray-100',
-						'bg-white',
-						'dark:bg-gray-900',
-						'p-8',
-						'opacity-0',
-						'shadow-2xl',
-						'shadow-gray-600')
+					id: 'navlinks_menu',
+					class: class_('relative'),
+					/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__navlinks_menu__hyop} */
+					hyop: 'site__header__navlinks_menu__hyop'
 				}, [
 					account__div_({
 						class: class_(
 							'absolute',
-							'top-6',
-							'right-6')
+							'-top-4',
+							'-right-4')
 					}),
 					div_({
 						class: class_(
@@ -233,7 +249,9 @@ export function site__header_({
 								'tracking-wide',
 								'lg:flex-row',
 								'lg:gap-0',
-								'lg:text-sm')
+								'lg:text-sm'),
+							/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__navlinks_link__hyop} */
+							hyop: 'site__header__navlinks_link__hyop'
 						}, links.map(link=>
 							li_([
 								a_({
@@ -284,6 +302,32 @@ export function site__header_({
 							}, ' Get Started')
 						])
 					])
+				]),
+				div_({
+					id: 'navlinks_login',
+					class: class_(
+						'hidden',
+						'relative'),
+					/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__navlinks_login__hyop} */
+					hyop: 'site__header__navlinks_login__hyop'
+				}, [
+					button_({
+						class: class_(
+							'absolute',
+							'-top-4',
+							'-right-4',
+							'border-none',
+							'h-6',
+							'w-6'),
+						/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__navlinks_login__close__hyop} */
+						hyop: 'site__header__navlinks_login__close__hyop'
+					}, [
+						heroicons_x_mark_({
+							class: class_(
+								'stroke-gray-900',
+								'dark:stroke-white')
+						})
+					])
 				])
 			])
 		)
@@ -299,7 +343,9 @@ export function site__header_({
 					'account__div',
 					'h-6',
 					'w-6',
-					_class)
+					_class),
+				/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__account__div__hyop} */
+				hyop: 'site__header__account__div__hyop'
 			}, [
 				heroicons_user_circle_({
 					class: class_(
