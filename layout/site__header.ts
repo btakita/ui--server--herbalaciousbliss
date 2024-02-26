@@ -8,10 +8,11 @@ import {
 import { site__title_ } from '@rappstack/domain--server/site'
 import { class_, style_, style_url_ } from 'ctx-core/html'
 import { type tag_dom_T } from 'relementjs'
-import { a_, button_, div_, header_, li_, nav_, span_, ul_ } from 'relementjs/html'
+import { a_, button_, div_, header_, img_, li_, nav_, span_, ul_ } from 'relementjs/html'
 import { type request_ctx_T } from 'relysjs/server'
 import { stroke_class, text_class } from '../css/index.js'
 import herbaliciousbliss_logo_webp from '../public/asset/image/herbaliciousbliss-logo.webp'
+import google_signin_light_svg from '../public/asset/image/icon/google_signin_light.svg'
 export function site__header_({
 	ctx,
 	title,
@@ -330,6 +331,17 @@ export function site__header_({
 					}, [
 						heroicons_x_mark_({
 							class: stroke_class
+						})
+					]),
+					a_({
+						id: 'google_signin',
+						href: '/'
+					}, [
+						img_({
+							src: google_signin_light_svg,
+							width: 175,
+							height: 40,
+							title: 'Sign in with Google'
 						})
 					])
 				])
