@@ -1,5 +1,5 @@
 import { container__div_ } from '@btakita/ui--any--herbaliciousbliss/container'
-import { heroicons_user_circle_, heroicons_x_mark_ } from '@btakita/ui--any--herbaliciousbliss/icon'
+import { heroicons_user_circle_, heroicons_uturn_left_ } from '@btakita/ui--any--herbaliciousbliss/icon'
 import { site__title_ } from '@rappstack/domain--server/site'
 import { class_, style_, style_url_ } from 'ctx-core/html'
 import { type tag_dom_T } from 'relementjs'
@@ -322,7 +322,7 @@ export function site__header_({
 						/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__navlinks_login__close__hyop} */
 						hyop: 'site__header__navlinks_login__close__hyop'
 					}, [
-						heroicons_x_mark_({
+						heroicons_uturn_left_({
 							class: class_(
 								'stroke-gray-900',
 								'dark:stroke-white')
