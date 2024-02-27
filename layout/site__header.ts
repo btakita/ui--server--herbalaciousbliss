@@ -70,7 +70,8 @@ export function site__header_({
 							'hidden',
 							'lg:block',
 							'relative',
-							'ml-auto')
+							'ml-auto'),
+						is_active__toggle: 1
 					}),
 					nav_layer_(),
 					navlinks__div_()
@@ -349,9 +350,11 @@ export function site__header_({
 		)
 	}
 	function account__button_({
-		class: _class
+		class: _class,
+		is_active__toggle
 	}:{
 		class?:string
+		is_active__toggle?:1|0
 	}) {
 		return (
 			button_({
@@ -360,6 +363,7 @@ export function site__header_({
 					'h-6',
 					'w-6',
 					_class),
+				'data-is_active__toggle': is_active__toggle,
 				/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__account__button__hyop} */
 				hyop: 'site__header__account__button__hyop'
 			}, [
