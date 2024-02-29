@@ -361,7 +361,9 @@ export function site__header_({
 				person?.image
 					? img_({
 						src: person.image,
-						class: class_('rounded-full')
+						class: class_('rounded-full'),
+						/** @see {https://stackoverflow.com/a/61042200/142571} */
+						referrerpolicy: 'no-referrer'
 					})
 					: heroicons_user_circle_({
 						class: class_(
