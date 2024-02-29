@@ -41,9 +41,12 @@
 		"layout"
 	],
 	"dependencies": {
+		"@btakita/domain--server--herbaliciousbliss": "workspace:*",
 		"@btakita/ui--any--herbaliciousbliss": "workspace:*",
 		"ctx-core": "^6.5.0",
-		"relementjs": "^0.73.7"
+		"relementjs": "^0.74.0",
+		"rebuildjs": "^0.63.7",
+		"relysjs": "^1.14.12"
 	},
 	"devDependencies": {
 		"bun-types": "latest"

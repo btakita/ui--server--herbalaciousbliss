@@ -5,6 +5,7 @@ import {
 	heroicons_uturn_left_,
 	heroicons_x_mark_
 } from '@btakita/ui--any--herbaliciousbliss/icon'
+import { person_ } from '@btakita/domain--server--herbaliciousbliss/auth'
 import { site__title_ } from '@rappstack/domain--server/site'
 import { class_, style_, style_url_ } from 'ctx-core/html'
 import { type tag_dom_T } from 'relementjs'
@@ -23,18 +24,9 @@ export function site__header_({
 	class?:string
 }, ...children:tag_dom_T[]) {
 	const links = [
-		{
-			to: '/#features',
-			label: 'Features',
-		},
-		{
-			to: '/#solution',
-			label: 'Solution',
-		},
-		{
-			to: '/#reviews',
-			label: 'Reviews',
-		},
+		{ to: '/#features', label: 'Features' },
+		{ to: '/#solution', label: 'Solution' },
+		{ to: '/#reviews', label: 'Reviews' },
 	]
 	return (
 		header_({
@@ -44,8 +36,6 @@ export function site__header_({
 		}, [
 			nav_({
 				class: class_(
-					'absolute',
-					'z-10',
 					'w-full',
 					'border-black/5',
 					'dark:border-white/5',
@@ -80,7 +70,7 @@ export function site__header_({
 			...children
 		]))
 	function nav_master__div_() {
-	  return (
+		return (
 			div_({
 				class: class_(
 					'relative',
@@ -155,7 +145,7 @@ export function site__header_({
 		)
 	}
 	function nav_layer_() {
-	  return (
+		return (
 			div_({
 				id: 'nav_layer',
 				'aria-hidden': true,
@@ -336,7 +326,7 @@ export function site__header_({
 					]),
 					a_({
 						id: 'google_signin',
-						href: '/'
+						href: '/login/google'
 					}, [
 						img_({
 							src: google_signin_light_svg,
@@ -356,6 +346,7 @@ export function site__header_({
 		class?:string
 		is_active__toggle?:1|0
 	}) {
+		const person = person_(ctx)
 		return (
 			button_({
 				class: class_(
@@ -367,11 +358,16 @@ export function site__header_({
 				/** @see {import('@btakita/ui--browser--herbaliciousbliss/layout').site__header__account__button__hyop} */
 				hyop: 'site__header__account__button__hyop'
 			}, [
-				heroicons_user_circle_({
-					class: class_(
-						'stroke-black',
-						'dark:stroke-white')
-				})
+				person?.image
+					? img_({
+						src: person.image,
+						class: class_('rounded-full')
+					})
+					: heroicons_user_circle_({
+						class: class_(
+							'stroke-black',
+							'dark:stroke-white')
+					})
 			])
 		)
 	}
