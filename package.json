@@ -43,10 +43,10 @@
 	"dependencies": {
 		"@btakita/domain--server--herbaliciousbliss": "workspace:*",
 		"@btakita/ui--any--herbaliciousbliss": "workspace:*",
-		"ctx-core": "^6.5.1",
-		"relementjs": "^0.74.1",
-		"rebuildjs": "^0.63.8",
-		"relysjs": "^1.14.13"
+		"ctx-core": "^6.5.3",
+		"relementjs": "^0.74.3",
+		"rebuildjs": "^0.63.10",
+		"relysjs": "^1.14.15"
 	},
 	"devDependencies": {
 		"bun-types": "latest"
