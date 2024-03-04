@@ -45,8 +45,8 @@
 		"@btakita/ui--any--herbaliciousbliss": "workspace:*",
 		"ctx-core": "^6.5.3",
 		"relementjs": "^0.74.3",
-		"rebuildjs": "^0.63.10",
-		"relysjs": "^1.14.17"
+		"rebuildjs": "^0.63.11",
+		"relysjs": "^1.14.18"
 	},
 	"devDependencies": {
 		"bun-types": "latest"
