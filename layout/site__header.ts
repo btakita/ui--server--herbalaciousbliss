@@ -6,6 +6,7 @@ import {
 	heroicons_x_mark_
 } from '@btakita/ui--any--herbaliciousbliss/icon'
 import { person_ } from '@btakita/domain--server--herbaliciousbliss/auth'
+import { logo_image_ } from '@rappstack/domain--server/logo'
 import { site__title_ } from '@rappstack/domain--server/site'
 import { class_, style_, style_url_ } from 'ctx-core/html'
 import { type tag_dom_T } from 'relementjs'
@@ -91,17 +92,10 @@ export function site__header_({
 						'space-x-2',
 						'text-2xl')
 				}, [
-					div_({
+					logo_image_(ctx, {
 						class: class_(
 							'h-24',
-							'w-24',
-							'rounded-full',
-							'bg-no-repeat',
-							'bg-top',
-							'bg-contain'),
-						style: style_({
-							'background-image': style_url_(herbaliciousbliss_logo_webp)
-						})
+							'w-24')
 					}),
 					div_({
 						class: class_(

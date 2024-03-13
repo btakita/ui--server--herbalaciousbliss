@@ -1,5 +1,5 @@
 import { container__div_ } from '@btakita/ui--any--herbaliciousbliss/container'
-import { social_a1_ } from '@rappstack/domain--server/social'
+import { site__social_a1_ } from '@rappstack/domain--server/site'
 import { class_ } from 'ctx-core/html'
 import { a_, br_, div_, footer_, li_, span_, ul_ } from 'relementjs/html'
 import { type request_ctx_T } from 'relysjs/server'
@@ -69,7 +69,7 @@ export function site__footer_({
 								'min-w-28',
 								'sm:min-w-52',
 								'space-y-8')
-						}, social_a1_(ctx).map(social=>
+						}, (site__social_a1_(ctx) ?? []).map(social=>
 							li_([
 								a_({
 									href: '#',
