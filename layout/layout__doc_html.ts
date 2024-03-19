@@ -28,7 +28,6 @@ export function layout__doc_html_({
 	description,
 	favicon,
 	social_image_url,
-	body_class,
 }:{
 	ctx:request_ctx_T
 	html_props?:tag_props_T&{ class?:string }
@@ -40,7 +39,6 @@ export function layout__doc_html_({
 	description?:string
 	favicon?:icon_link_props_T
 	social_image_url?:string
-	body_class?:string
 }, ...children:tag_dom_T[]) {
 	canonical_url ??= request_url_(ctx).href
 	description ??= site__description_(ctx)
