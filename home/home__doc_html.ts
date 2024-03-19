@@ -1,5 +1,5 @@
 import { class_ } from 'ctx-core/html'
-import { div_, main_ } from 'relementjs/html'
+import { article_, div_, main_ } from 'relementjs/html'
 import { type request_ctx_T, request_url_ } from 'relysjs/server'
 import { layout__doc_html_, site__footer_, site__header_ } from '../layout/index.js'
 export function home__doc_html_({ ctx }:{ ctx:request_ctx_T }) {
@@ -40,7 +40,10 @@ export function home__doc_html_({ ctx }:{ ctx:request_ctx_T }) {
 							'bg-red-600',
 							'text-white'),
 					}, error)
-					: undefined
+					: undefined,
+				article_([
+					'[Page Content Here]'
+				]),
 			])
 		)
 	}
