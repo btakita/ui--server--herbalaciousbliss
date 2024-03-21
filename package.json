@@ -46,13 +46,13 @@
 		"@rappstack/domain--server": "workspace:*",
 		"ctx-core": "^6.6.2",
 		"relementjs": "^0.75.2",
-		"rebuildjs": "^0.66.2",
-		"relysjs": "^1.17.2"
+		"rebuildjs": "^0.66.3",
+		"relysjs": "^1.17.3"
 	},
 	"devDependencies": {
 		"bun-types": "latest"
 	},
 	"peerDependencies": {
-		"typescript": "^5.4.2"
+		"typescript": "^5.4.3"
 	}
 }
