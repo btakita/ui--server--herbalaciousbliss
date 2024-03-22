@@ -45,9 +45,9 @@
 		"@btakita/ui--any--herbaliciousbliss": "workspace:*",
 		"@rappstack/domain--server": "workspace:*",
 		"ctx-core": "^6.6.2",
-		"relementjs": "^0.75.2",
+		"relementjs": "^0.75.5",
 		"rebuildjs": "^0.66.3",
-		"relysjs": "^1.17.3"
+		"relysjs": "^1.17.4"
 	},
 	"devDependencies": {
 		"bun-types": "latest"
