@@ -45,7 +45,7 @@
 		"@btakita/ui--any--herbaliciousbliss": "workspace:*",
 		"@rappstack/domain--server": "workspace:*",
 		"ctx-core": "^6.7.0",
-		"relementjs": "^0.76.0",
+		"relementjs": "^0.77.0",
 		"rebuildjs": "^0.67.1",
 		"relysjs": "^1.18.0"
 	},
