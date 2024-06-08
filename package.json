@@ -46,8 +46,8 @@
 		"@rappstack/domain--server": "workspace:*",
 		"ctx-core": "^7.2.17",
 		"relementjs": "^0.80.16",
-		"rebuildjs": "^0.70.25",
-		"relysjs": "^1.21.44"
+		"rebuildjs": "^0.70.26",
+		"relysjs": "^1.21.45"
 	},
 	"devDependencies": {
 		"bun-types": "latest"
