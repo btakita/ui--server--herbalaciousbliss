@@ -1,8 +1,11 @@
 import { class_ } from 'ctx-core/html'
-import { article_, div_, main_ } from 'relementjs/html'
+import { article_, main_ } from 'relementjs/html'
 import { type request_ctx_T, request_url_ } from 'relysjs/server'
+import { error__div_ } from '../error/index.js'
 import { layout__doc_html_, site__footer_, site__header_ } from '../layout/index.js'
-export function home__doc_html_({ ctx }:{ ctx:request_ctx_T }) {
+type props_T = { ctx:request_ctx_T }
+export function home__doc_html_($p:props_T) {
+	const { ctx } = $p
 	return (
 		layout__doc_html_({
 			ctx,
@@ -11,13 +14,9 @@ export function home__doc_html_({ ctx }:{ ctx:request_ctx_T }) {
 				class: class_('home__doc_html'),
 			}
 		}, [
-			div_({
-				class: class_(),
-			}, [
-				site__header_({ ctx }),
-				home__main_(),
-				site__footer_({ ctx })
-			])
+			site__header_({ ctx }),
+			home__main_(),
+			site__footer_({ ctx })
 		])
 	)
 	function home__main_() {
@@ -31,16 +30,7 @@ export function home__doc_html_({ ctx }:{ ctx:request_ctx_T }) {
 					'justify-center',
 					'mb-12')
 			}, [
-				error
-					? div_({
-						class: class_(
-							'w-full',
-							'py-2',
-							'px-7',
-							'bg-red-600',
-							'text-white'),
-					}, error)
-					: undefined,
+				error__div_({ error }),
 				article_([
 					'[Page Content Here]'
 				]),

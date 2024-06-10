@@ -27,8 +27,10 @@
 		".": "./index.ts",
 		"./astrolus": "./astrolus/index.ts",
 		"./css": "./css/index.ts",
+		"./error": "./error/index.ts",
 		"./home": "./home/index.ts",
 		"./layout": "./layout/index.ts",
+		"./lyra": "./lyra/index.ts",
 		"./package.json": "./package.json"
 	},
 	"files": [
@@ -37,8 +39,10 @@
 		"*.json",
 		"astrolus",
 		"css",
+		"error",
 		"home",
-		"layout"
+		"layout",
+		"lyra"
 	],
 	"dependencies": {
 		"@btakita/domain--server--herbaliciousbliss": "workspace:*",
