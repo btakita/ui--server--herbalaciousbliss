@@ -616,6 +616,7 @@ export function lyra__doc_html_($p:props_T) {
 						src: Tea_house_profile_3_09_24_webp,
 						class: class_(
 							'w-36',
+							'h-[211px]',
 							'aspect-auto',
 							'ml-auto',)
 					}),
