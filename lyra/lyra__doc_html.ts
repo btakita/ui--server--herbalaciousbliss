@@ -62,6 +62,7 @@ export function lyra__doc_html_($p:props_T) {
 					'top-0',
 					'left-0',
 					'lg:bg-no-repeat',
+					'bg-center',
 					'w-full',
 					'h-full',
 					'z-0',),
@@ -91,7 +92,7 @@ export function lyra__doc_html_($p:props_T) {
 					'flex-col',
 					'pb-4',
 					'lg:pb-0',
-					)
+				)
 			}, [
 				div_({
 					class: class_(
@@ -129,101 +130,116 @@ export function lyra__doc_html_($p:props_T) {
 						'text-center',
 						'mt-4',)
 				}, 'Lyra Star Mist'),
-				div_({
-					class: class_(
-						'flex-grow',
-						'relative',
-						'w-full',
-						'grid',
-						'grid-cols-5',
-						'mt-2',)
-				}, [
-					div_({
-						class: class_(
-							'col-span-2',
-							'bg-center',
-							'bg-contain',
-							'bg-no-repeat',),
-						style: html_style_({
-							'background-image': `url('${GWA_business_card_Lyra_Star_webp}')`
-						})
-					}),
-					about_(),
-				]),
+				content_(),
 			])
 		)
-		function about_() {
-			return (
-				dl_({
+		function content_() {
+			return div_({
+				class: class_(
+					'flex-grow',
+					'relative',
+					'w-full',
+					'grid',
+					'grid-cols-5',
+					'mt-2',)
+			}, [
+				div_({
 					class: class_(
-						'col-span-3',
-						'text-card-indigo',)
-				}, [
-					dt_([
-						h2_({
-							class: class_(
-								'text-2xl',
-								'text-center',)
-						}, 'About:'),
-					]),
-					dd_([
-						dl_([
-							inline__dt_([
-								card__h3_('Quantum Dream Weaver')
-							]),
-							strong_(': '),
-							inline__dd_([
-								`She has developed her practice to include holistic healing, education and mentorship programs`,
-							]),
-							div_({
-								class: class_('mt-4')
-							}, [
-								inline__dt_({
-									class: class_(
-										'ml-4',
-										'font-bold')
-								}, [
-									card__h3_('Ambassador & Liaison for')
+						'h-64',
+						'sm:h-auto',
+						'row-start-1',
+						'col-start-1',
+						'col-span-5',
+						'sm:col-span-2',
+						'bg-center',
+						'bg-contain',
+						'bg-no-repeat',),
+					style: html_style_({
+						'background-image': `url('${GWA_business_card_Lyra_Star_webp}')`
+					})
+				}),
+				about_(),
+			])
+			function about_() {
+				return (
+					dl_({
+						class: class_(
+							'px-4',
+							'col-start-1',
+							'sm:col-start-3',
+							'sm:px-0',
+							'row-start-2',
+							'sm:row-start-1',
+							'col-span-5',
+							'sm:col-span-3',
+							'text-card-indigo',)
+					}, [
+						dt_([
+							h2_({
+								class: class_(
+									'text-2xl',
+									'text-center',)
+							}, 'About:'),
+						]),
+						dd_([
+							dl_([
+								inline__dt_([
+									card__h3_('Quantum Dream Weaver')
 								]),
-								strong_(':'),
-								dd_([
-									inline__ul_([
-										li_('Natural Systems Design & Education'),
-										li_('Alternative Mental and Physical healing'),
-										li_('Regenerative and sustainable development'),
-										li_('Environmental education'),
-										li_('Human Relations & Positive Psychology'),
-										li_('Reiki Master — (1998)'),
-									]),
-								])
-							]),
-							div_({
-								class: class_('mt-4'),
-							}, [
-								inline__dt_({
-									class: class_(
-										'ml-4',
-										'font-bold')
-								}, [
-									card__h3_('Experience/Skills')
+								strong_(': '),
+								inline__dd_([
+									`She has developed her practice to include holistic healing, education and mentorship programs`,
 								]),
-								strong_(':'),
-								dd_({
-									class: class_('text-sm')
+								div_({
+									class: class_('mt-4')
 								}, [
-									inline__ul_([
-										li_('Business owner (1999—present)'),
-										li_('Legal Aid (2002—present)'),
-										li_('Minister (2018—present)'),
-										li_('Master Gardener (2016—present)'),
-										li_('Skilled Artisan, artist, author, & poet (1978-present)'),
+									inline__dt_({
+										class: class_(
+											'ml-4',
+											'font-bold')
+									}, [
+										card__h3_('Ambassador & Liaison for')
 									]),
-								])
+									strong_(':'),
+									dd_([
+										inline__ul_([
+											li_('Natural Systems Design & Education'),
+											li_('Alternative Mental and Physical healing'),
+											li_('Regenerative and sustainable development'),
+											li_('Environmental education'),
+											li_('Human Relations & Positive Psychology'),
+											li_('Reiki Master — (1998)'),
+										]),
+									])
+								]),
+								div_({
+									class: class_('mt-4'),
+								}, [
+									inline__dt_({
+										class: class_(
+											'ml-4',
+											'font-bold')
+									}, [
+										card__h3_('Experience/Skills')
+									]),
+									strong_(':'),
+									dd_({
+										class: class_('text-sm')
+									}, [
+										inline__ul_([
+											li_('Business owner (1999—present)'),
+											li_('Legal Aid (2002—present)'),
+											li_('Minister (2018—present)'),
+											li_('Master Gardener (2016—present)'),
+											li_('Skilled Artisan, artist, author, & poet (1978-present)'),
+										]),
+									])
+								]),
 							]),
 						]),
-					]),
-				])
-			)
+					])
+				)
+			}
 		}
 	}
 	function cell_l1_l0_() {
@@ -255,7 +271,7 @@ export function lyra__doc_html_($p:props_T) {
 						'bg-gray-950',
 						'opacity-80',
 						'sm:opacity-60',
-						)
+					)
 				}),
 				dl_({
 					class: class_(
@@ -526,7 +542,7 @@ export function lyra__doc_html_($p:props_T) {
 						'bg-gray-950',
 						'opacity-80',
 						'sm:opacity-60',
-						)
+					)
 				}),
 				div_({
 					class: class_(
@@ -732,7 +748,8 @@ export function lyra__doc_html_($p:props_T) {
 									card__h2_('Passions Focus'),
 								]),
 								strong_(': '),
-								inline__dd_('social re-engineering for excellence & innovation | natural system design | health in nature | network scout & facilitator | edutainment design & app | quantum design ~ Zen | journalism | coaching | psychology | philosophy | music composition'),
+								inline__dd_(
+									'social re-engineering for excellence & innovation | natural system design | health in nature | network scout & facilitator | edutainment design & app | quantum design ~ Zen | journalism | coaching | psychology | philosophy | music composition'),
 							]),
 							div_({
 								class: class_('mt-4')
@@ -741,7 +758,8 @@ export function lyra__doc_html_($p:props_T) {
 									card__h2_('Values'),
 								]),
 								strong_(': '),
-								inline__dd_('Honoring the Golden Rule.  Being straight with each other | 7th Generation Principles | Empathy | Perseverance | Soul Sovereignty'),
+								inline__dd_(
+									'Honoring the Golden Rule.  Being straight with each other | 7th Generation Principles | Empathy | Perseverance | Soul Sovereignty'),
 							]),
 							div_({
 								class: class_('mt-4')
@@ -757,7 +775,8 @@ export function lyra__doc_html_($p:props_T) {
 											tb_a_({
 												href: 'https://docs.google.com/document/d/15H_-XykD7o4BlQP_pJCJRBTmErOfbmORmvSjNKjA-FM/edit?usp=drivesdk',
 												class: a__class,
-											}, 'Catalog Subscriptions | Products | Merch')]),
+											}, 'Catalog Subscriptions | Products | Merch')
+										]),
 										li_([
 											tb_a_({
 												href: 'https://docs.google.com/document/d/1sFsc3VqZAw3KmrM3DyfKh1ug6aVhE-FaVzspEXrcpD0/edit?usp=sharing',
