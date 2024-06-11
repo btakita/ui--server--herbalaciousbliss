@@ -29,6 +29,7 @@
 		"./css": "./css/index.ts",
 		"./error": "./error/index.ts",
 		"./home": "./home/index.ts",
+		"./icon": "./icon/index.ts",
 		"./layout": "./layout/index.ts",
 		"./lyra": "./lyra/index.ts",
 		"./package.json": "./package.json"
@@ -41,6 +42,7 @@
 		"css",
 		"error",
 		"home",
+		"icon",
 		"layout",
 		"lyra"
 	],
