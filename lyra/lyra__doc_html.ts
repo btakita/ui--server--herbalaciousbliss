@@ -1,13 +1,38 @@
 import { tb_a_ } from '@rappstack/ui--any/anchor'
 import { class_, html_style_ } from 'ctx-core/html'
 import { type tag_dom_T } from 'relementjs'
-import { a_, dd_, div_, dl_, dt_, h1_, h2_, h3_, h4_, h5_, li_, main_, span_, strong_, ul_ } from 'relementjs/html'
+import {
+	a_,
+	dd_,
+	div_,
+	dl_,
+	dt_,
+	em_,
+	h1_,
+	h2_,
+	h3_,
+	h4_,
+	h5_,
+	img_,
+	li_,
+	main_,
+	span_,
+	strong_,
+	ul_
+} from 'relementjs/html'
 import { type request_ctx_T } from 'relysjs/server'
 import { aries__svg_ } from '../icon/index.js'
 import { layout__doc_html_ } from '../layout/index.js'
 import GWA_business_card_Lyra_Star_webp from '../public/asset/image/lyra/GWA_business_card_Lyra_Star.webp'
 import SparkITude_small_board_2b_webp from '../public/asset/image/lyra/SparkITude_small_board_2b.webp'
+import Tea_house_profile_3_09_24_webp from '../public/asset/image/lyra/Tea-house-profile-3-09-24.webp'
 type props_T = { ctx:request_ctx_T }
+const a__class = class_(
+	'text-blue-600',
+	'visited:text-card-indigo',)
+const child_a__class = class_(
+	'text-blue-600',
+	'[&>a:visited]:text-card-indigo',)
 export function lyra__doc_html_($p:props_T) {
 	const { ctx } = $p
 	return (
@@ -156,11 +181,7 @@ export function lyra__doc_html_($p:props_T) {
 								]),
 								strong_(':'),
 								dd_([
-									ul_({
-										class: class_(
-											'ml-4',
-											'list-disc',)
-									}, [
+									inline__ul_([
 										li_('Natural Systems Design & Education'),
 										li_('Alternative Mental and Physical healing'),
 										li_('Regenerative and sustainable development'),
@@ -184,12 +205,7 @@ export function lyra__doc_html_($p:props_T) {
 								dd_({
 									class: class_('text-sm')
 								}, [
-									ul_({
-										class: class_(
-											'ml-4',
-											'list-disc',
-										)
-									}, [
+									inline__ul_([
 										li_('Business owner (1999—present)'),
 										li_('Legal Aid (2002—present)'),
 										li_('Minister (2018—present)'),
@@ -309,9 +325,7 @@ export function lyra__doc_html_($p:props_T) {
 									'px-2',
 									'mt-8',
 									'bg-yellow-300',
-									'text-blue-600',
-									'[&>a:visited]:text-card-indigo',
-								)
+									child_a__class,)
 							}, [
 								tb_a_({ href: 'https://lyrastarmist.substack.com/' }, 'Substack'),
 								tb_a_(
@@ -339,16 +353,14 @@ export function lyra__doc_html_($p:props_T) {
 									a_({
 										class: class_(
 											'bg-yellow-300',
-											'text-blue-600',
-											'visited:text-card-indigo',),
+											a__class,),
 										href: 'mailto:lyrascookies@gmail.com'
 									}, 'lyrascookies@gmail.com'),
 									' health & holistic wellness | ',
 									a_({
 										class: class_(
 											'bg-yellow-300',
-											'text-blue-600',
-											'visited:text-card-indigo',),
+											a__class,),
 										href: 'mailto:greatworksalliance@gmail.com'
 									}, 'greatworksalliance@gmail.com')
 								]),
@@ -506,9 +518,7 @@ export function lyra__doc_html_($p:props_T) {
 						)
 					}, [
 						tb_a_({
-							class: class_(
-								'text-blue-600',
-								'visited:text-card-indigo',),
+							class: a__class,
 							href: 'https://docs.google.com/document/d/1_m9kefEV7Na3G34HhtKbCsFzz5ijaAF0XQe9hcHgrw0/edit'
 						}, 'Support this person'),
 						' Project, Org or topic'
@@ -543,13 +553,7 @@ export function lyra__doc_html_($p:props_T) {
 					}, 'Superpowers')
 				]),
 				dd_([
-					ul_({
-						class: class_(
-							'ml-4',
-							'list-disc',
-							'[&>li]:pl-4'
-						)
-					}, [
+					inline__ul_([
 						li_('Alturism'),
 						li_('Innovation'),
 						li_('Creativity'),
@@ -569,13 +573,7 @@ export function lyra__doc_html_($p:props_T) {
 					}, 'Field Skills')
 				]),
 				dd_([
-					ul_({
-						class: class_(
-							'ml-4',
-							'list-disc',
-							'[&>li]:pl-4'
-						)
-					}, [
+					inline__ul_([
 						li_('Reiki Master | Health & Healing'),
 						li_('Reverse Engineer'),
 						li_('Writer | Author'),
@@ -598,17 +596,180 @@ export function lyra__doc_html_($p:props_T) {
 					'row-start-1',
 					'col-span-2',
 					'row-span-7',
-					'bg-gradient-to-tl',
-					'from-card-r0-br',
-					'to-card-r0-tl',
-					'opacity-80',)
+					'text-black',)
 			}, [
 				div_({
-					class: class_('text-white')
-				}, 'cell_r0')
+					class: class_(
+						'absolute',
+						'top-0',
+						'left-0',
+						'w-full',
+						'h-full',
+						'bg-gradient-to-tl',
+						'from-card-r0-br',
+						'to-card-r0-tl',
+						'opacity-80',
+						'-z-10',)
+				}),
+				div_([
+					img_({
+						src: Tea_house_profile_3_09_24_webp,
+						class: class_(
+							'w-36',
+							'aspect-auto',
+							'ml-auto',)
+					}),
+				]),
+				dl_({
+					class: class_('px-4')
+				}, [
+					dt_([
+						h2_({
+							class: class_(
+								'mt-4',
+								'text-xl',
+								'font-bold',)
+						}, 'Quantum Life Coach')
+					]),
+					dd_([
+						card__h3_('Free Agent Consultant'),
+						strong_(' | '),
+						card__h3_('Community Ambassador & Liaison'),
+						strong_(' | '),
+						card__h3_('Jedi Mentor & Steward'),
+						strong_(' | '),
+						em_('“I am here to assist in igniting your Soul Spark.”'),
+						dl_([
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									card__h2_('Passion'),
+								]),
+								strong_(': '),
+								inline__dd_('Creating & sharing in the magic of life'),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									card__h2_('Top Skills'),
+								]),
+								strong_(': '),
+								inline__dd_('Public Speaking • Leadership Development • Coaching • Project Management • Public Policy'),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									card__h2_('Ideal role'),
+								]),
+								strong_(': '),
+								inline__dd_('Co-Conductor / Orchestrator / Regenerative Holistic Eco System Design Specialist'),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									card__h2_('Ideal Setting'),
+								]),
+								strong_(': '),
+								inline__dd_('In nature, relaxing tea shop, places of healing'),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									card__h2_('Priority Anchor'),
+								]),
+								strong_(': '),
+								inline__dd_('Heart - Head Synchronicity'),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									card__h2_('Mission'),
+								]),
+								strong_(': '),
+								inline__dd_('Inspire & Empower the Hero within each of us! Unlocking your SoulSparks.'),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									card__h2_('Passions Focus'),
+								]),
+								strong_(': '),
+								inline__dd_('social re-engineering for excellence & innovation | natural system design | health in nature | network scout & facilitator | edutainment design & app | quantum design ~ Zen | journalism | coaching | psychology | philosophy | music composition'),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									card__h2_('Values'),
+								]),
+								strong_(': '),
+								inline__dd_('Honoring the Golden Rule.  Being straight with each other | 7th Generation Principles | Empathy | Perseverance | Soul Sovereignty'),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									card__h2_('Offerings'),
+								]),
+								strong_(': '),
+								inline__dd_([
+									'Open Minded Human for closest collaborators',
+									inline__ul_([
+										li_([
+											tb_a_({
+												href: 'https://docs.google.com/document/d/15H_-XykD7o4BlQP_pJCJRBTmErOfbmORmvSjNKjA-FM/edit?usp=drivesdk',
+												class: a__class,
+											}, 'Catalog Subscriptions | Products | Merch')]),
+										li_([
+											tb_a_({
+												href: 'https://docs.google.com/document/d/1sFsc3VqZAw3KmrM3DyfKh1ug6aVhE-FaVzspEXrcpD0/edit?usp=sharing',
+												class: a__class,
+											}, 'Project portfolio catalog hub | Quests')
+										]),
+									])
+								]),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									card__h2_('Needs'),
+								]),
+								strong_(': '),
+								inline__dd_([
+									tb_a_({
+										href: 'https://docs.google.com/document/d/1VlSYFmnecQ60IBSnWaw0R7V4dbRK3Da_JN6RO0TTgBc/edit?usp=sharing',
+										class: a__class,
+									}, 'Needed list'),
+									' (For barter, trade, or exchange of services)'
+								]),
+							]),
+						]),
+					])
+				]),
 			])
 		)
 	}
+}
+function card__h2_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])) {
+	const [props, children] =
+		<[{ class?:string }, tag_dom_T[]]>(
+			Object.getPrototypeOf(arg_a1[0] ?? 0) === Object.prototype
+				? [arg_a1[0], arg_a1.slice(1)]
+				: [{}, arg_a1])
+	return h2_({
+		class: class_(
+			'inline',
+			'font-bold',
+			props.class)
+	}, ...children)
 }
 function card__h3_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])) {
 	const [props, children] =
@@ -671,5 +832,19 @@ function inline__dd_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])
 		class: class_(
 			'inline',
 			props.class)
+	}, ...children)
+}
+function inline__ul_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])) {
+	const [props, children] =
+		<[{ class?:string }, tag_dom_T[]]>(
+			Object.getPrototypeOf(arg_a1[0] ?? 0) === Object.prototype
+				? [arg_a1[0], arg_a1.slice(1)]
+				: [{}, arg_a1])
+	return ul_({
+		class: class_(
+			'ml-4',
+			'list-disc',
+			'[&>li]:pl-4',
+			props.class,)
 	}, ...children)
 }
