@@ -12,6 +12,7 @@ import {
 	site__gtag_id_,
 	site__social_image_url_
 } from '@rappstack/domain--server/site'
+import { nofouc__body__script_ } from '@rappstack/ui--server/fouc'
 import { class_ } from 'ctx-core/html'
 import { raw_, type tag_dom_T } from 'relementjs'
 import { type tag_props_T } from 'relementjs/any'
@@ -56,6 +57,7 @@ export function layout__doc_html_($p:layout__doc_html_props_T, ...children:tag_d
 		doc_html_({
 			...html_props,
 			class: class_(
+				'nofouc',
 				'doc__html',
 				'noscript',
 				html_props?.class)
@@ -123,6 +125,7 @@ export function layout__doc_html_($p:layout__doc_html_props_T, ...children:tag_d
 					'dark:bg-gray-900',
 					body__props?.class)
 			}, [
+				nofouc__body__script_(),
 				children,
 				site__gtag_id
 					? [
