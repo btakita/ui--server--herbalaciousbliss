@@ -46,12 +46,13 @@ export function lyra__doc_html_($p:props_T) {
 	function lyra__main_() {
 		return main_({
 			class: class_(
-				'h-[1200px]',
-				'w-[1130px]',
+				'lg:h-[1280px]',
+				'w-full',
+				'lg:w-[1080px]',
 				'relative',
 				'grid',
 				'grid-cols-5',
-				'grid-rows-7',
+				'lg:grid-rows-7',
 				'grid-flow-row',
 			),
 		}, [
@@ -60,7 +61,7 @@ export function lyra__doc_html_($p:props_T) {
 					'absolute',
 					'top-0',
 					'left-0',
-					'bg-no-repeat',
+					'lg:bg-no-repeat',
 					'w-full',
 					'h-full',
 					'z-0',),
@@ -82,10 +83,15 @@ export function lyra__doc_html_($p:props_T) {
 					'relative',
 					'z-10',
 					'row-start-1',
-					'col-span-3',
-					'row-span-3',
+					'lg:row-start-1',
+					'col-span-5',
+					'lg:col-span-3',
+					'lg:row-span-3',
 					'flex',
-					'flex-col',)
+					'flex-col',
+					'pb-4',
+					'lg:pb-0',
+					)
 			}, [
 				div_({
 					class: class_(
@@ -227,10 +233,12 @@ export function lyra__doc_html_($p:props_T) {
 				class: class_(
 					'relative',
 					'z-10',
-					'row-start-4',
+					'row-start-2',
+					'lg:row-start-4',
 					'col-start-1',
-					'col-span-2',
-					'row-span-4',
+					'col-span-3',
+					'lg:col-span-2',
+					'lg:row-span-4',
 					'text-white',)
 			}, [
 				div_({
@@ -487,10 +495,12 @@ export function lyra__doc_html_($p:props_T) {
 				class: class_(
 					'relative',
 					'z-10',
-					'row-start-4',
-					'col-start-3',
-					'col-span-1',
-					'row-span-4',
+					'row-start-2',
+					'lg:row-start-4',
+					'col-start-4',
+					'col-span-2',
+					'lg:col-span-1',
+					'lg:row-span-4',
 					'text-white')
 			}, [
 				div_({
@@ -593,9 +603,11 @@ export function lyra__doc_html_($p:props_T) {
 				class: class_(
 					'relative',
 					'z-10',
-					'row-start-1',
-					'col-span-2',
-					'row-span-7',
+					'row-start-3',
+					'lg:row-start-1',
+					'col-span-5',
+					'lg:col-span-2',
+					'lg:row-span-7',
 					'text-black',)
 			}, [
 				div_({
@@ -615,8 +627,11 @@ export function lyra__doc_html_($p:props_T) {
 					img_({
 						src: Tea_house_profile_3_09_24_webp,
 						class: class_(
-							'w-36',
-							'h-[211px]',
+							'float-right',
+							'lg:float-none',
+							'w-72',
+							'lg:w-36',
+							'lg:h-[211px]',
 							'aspect-auto',
 							'ml-auto',)
 					}),
