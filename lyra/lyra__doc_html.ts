@@ -1,6 +1,6 @@
 import { tb_a_ } from '@rappstack/ui--any/anchor'
 import { class_, html_style_ } from 'ctx-core/html'
-import { type tag_dom_T } from 'relementjs'
+import { raw_, type tag_dom_T } from 'relementjs'
 import {
 	a_,
 	dd_,
@@ -33,6 +33,7 @@ const a__class = class_(
 const child_a__class = class_(
 	'text-blue-600',
 	'[&>a:visited]:text-card-indigo',)
+const drop_shadow__class = 'drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'
 export function lyra__doc_html_($p:props_T) {
 	const { ctx } = $p
 	return (
@@ -639,7 +640,7 @@ export function lyra__doc_html_($p:props_T) {
 					'col-span-5',
 					'lg:col-span-2',
 					'lg:row-span-7',
-					'text-black',)
+					'text-white',)
 			}, [
 				div_({
 					class: class_(
@@ -675,112 +676,163 @@ export function lyra__doc_html_($p:props_T) {
 							class: class_(
 								'mt-4',
 								'text-xl',
-								'font-bold',)
+								'font-bold',
+								drop_shadow__class,)
 						}, 'Quantum Life Coach')
 					]),
 					dd_([
-						card__h3_('Free Agent Consultant'),
+						drop_shadow_card__h3_('Free Agent Consultant'),
 						strong_(' | '),
-						card__h3_('Community Ambassador & Liaison'),
+						drop_shadow_card__h3_('Community Ambassador & Liaison'),
 						strong_(' | '),
-						card__h3_('Jedi Mentor & Steward'),
+						drop_shadow_card__h3_('Jedi Mentor & Steward'),
 						strong_(' | '),
-						em_('“I am here to assist in igniting your Soul Spark.”'),
+						drop_shadow__em_('“I am here to assist in igniting your Soul Spark.”'),
 						dl_([
 							div_({
 								class: class_('mt-4')
 							}, [
 								inline__dt_([
-									card__h2_('Passion'),
+									drop_shadow_card__h2_('Passion'),
 								]),
 								strong_(': '),
-								inline__dd_('Creating & sharing in the magic of life'),
+								drop_shadow_inline__dd_('Creating & sharing in the magic of life'),
 							]),
 							div_({
 								class: class_('mt-4')
 							}, [
 								inline__dt_([
-									card__h2_('Top Skills'),
-								]),
-								strong_(': '),
-								inline__dd_('Public Speaking • Leadership Development • Coaching • Project Management • Public Policy'),
-							]),
-							div_({
-								class: class_('mt-4')
-							}, [
-								inline__dt_([
-									card__h2_('Ideal role'),
-								]),
-								strong_(': '),
-								inline__dd_('Co-Conductor / Orchestrator / Regenerative Holistic Eco System Design Specialist'),
-							]),
-							div_({
-								class: class_('mt-4')
-							}, [
-								inline__dt_([
-									card__h2_('Ideal Setting'),
-								]),
-								strong_(': '),
-								inline__dd_('In nature, relaxing tea shop, places of healing'),
-							]),
-							div_({
-								class: class_('mt-4')
-							}, [
-								inline__dt_([
-									card__h2_('Priority Anchor'),
-								]),
-								strong_(': '),
-								inline__dd_('Heart - Head Synchronicity'),
-							]),
-							div_({
-								class: class_('mt-4')
-							}, [
-								inline__dt_([
-									card__h2_('Mission'),
-								]),
-								strong_(': '),
-								inline__dd_('Inspire & Empower the Hero within each of us! Unlocking your SoulSparks.'),
-							]),
-							div_({
-								class: class_('mt-4')
-							}, [
-								inline__dt_([
-									card__h2_('Passions Focus'),
-								]),
-								strong_(': '),
-								inline__dd_(
-									'social re-engineering for excellence & innovation | natural system design | health in nature | network scout & facilitator | edutainment design & app | quantum design ~ Zen | journalism | coaching | psychology | philosophy | music composition'),
-							]),
-							div_({
-								class: class_('mt-4')
-							}, [
-								inline__dt_([
-									card__h2_('Values'),
-								]),
-								strong_(': '),
-								inline__dd_(
-									'Honoring the Golden Rule.  Being straight with each other | 7th Generation Principles | Empathy | Perseverance | Soul Sovereignty'),
-							]),
-							div_({
-								class: class_('mt-4')
-							}, [
-								inline__dt_([
-									card__h2_('Offerings'),
+									drop_shadow_card__h2_('Top Skills'),
 								]),
 								strong_(': '),
 								inline__dd_([
-									'Open Minded Human for closest collaborators',
+									drop_shadow__span_('Public Speaking'),
+									' • ',
+									drop_shadow__span_('Leadership Development'),
+									' • ',
+									drop_shadow__span_('Coaching'),
+									' • ',
+									drop_shadow__span_('Project Management'),
+									' • ',
+									drop_shadow__span_('Public Policy'),
+								]),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									drop_shadow_card__h2_('Ideal role'),
+								]),
+								strong_(': '),
+								inline__dd_([
+									raw_([
+										'Co-Conductor',
+										'Orchestrator',
+										'Regenerative Holistic Eco System Design Specialist',
+									].map(text=>
+										drop_shadow__span_(text)
+									).join(' / '))
+								]),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									drop_shadow_card__h2_('Ideal Setting'),
+								]),
+								strong_(': '),
+								drop_shadow_inline__dd_('In nature, relaxing tea shop, places of healing'),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									drop_shadow_card__h2_('Priority Anchor'),
+								]),
+								strong_(': '),
+								inline__dd_([
+									drop_shadow__span_('Heart'),
+									' - ',
+									drop_shadow__span_('Head Synchronicity'),
+								]),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									drop_shadow_card__h2_('Mission'),
+								]),
+								strong_(': '),
+								drop_shadow_inline__dd_('Inspire & Empower the Hero within each of us! Unlocking your SoulSparks.'),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									drop_shadow_card__h2_('Passions Focus'),
+								]),
+								strong_(': '),
+								inline__dd_([
+									raw_([
+										'social re-engineering for excellence & innovation',
+										'natural system design',
+										'health in nature',
+										'network scout & facilitator',
+										'edutainment design & app',
+										'quantum design ~ Zen',
+										'journalism',
+										'coaching',
+										'psychology',
+										'philosophy',
+										'music composition',
+									].map(text=>
+										drop_shadow__span_(text)
+									).join(' | '))
+								]),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									drop_shadow_card__h2_('Values'),
+								]),
+								strong_(': '),
+								inline__dd_([
+									raw_([
+										'Honoring the Golden Rule.  Being straight with each other',
+										'7th Generation Principles',
+										'Empathy',
+										'Perseverance',
+										'Soul Sovereignty',
+									].map(text=>
+										drop_shadow__span_(text)
+									).join(' | '))
+								]),
+							]),
+							div_({
+								class: class_('mt-4')
+							}, [
+								inline__dt_([
+									drop_shadow_card__h2_('Offerings'),
+								]),
+								strong_(': '),
+								inline__dd_([
+									drop_shadow__span_('Open Minded Human for closest collaborators'),
 									inline__ul_([
 										li_([
 											tb_a_({
 												href: 'https://docs.google.com/document/d/15H_-XykD7o4BlQP_pJCJRBTmErOfbmORmvSjNKjA-FM/edit?usp=drivesdk',
-												class: a__class,
+												class: class_(
+													a__class,
+													drop_shadow__class,),
 											}, 'Catalog Subscriptions | Products | Merch')
 										]),
 										li_([
 											tb_a_({
 												href: 'https://docs.google.com/document/d/1sFsc3VqZAw3KmrM3DyfKh1ug6aVhE-FaVzspEXrcpD0/edit?usp=sharing',
-												class: a__class,
+												class: class_(
+													a__class,
+													drop_shadow__class,),
 											}, 'Project portfolio catalog hub | Quests')
 										]),
 									])
@@ -790,10 +842,10 @@ export function lyra__doc_html_($p:props_T) {
 								class: class_('mt-4')
 							}, [
 								inline__dt_([
-									card__h2_('Needs'),
+									drop_shadow_card__h2_('Needs'),
 								]),
 								strong_(': '),
-								inline__dd_([
+								drop_shadow_inline__dd_([
 									tb_a_({
 										href: 'https://docs.google.com/document/d/1VlSYFmnecQ60IBSnWaw0R7V4dbRK3Da_JN6RO0TTgBc/edit?usp=sharing',
 										class: a__class,
@@ -821,6 +873,18 @@ function card__h2_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])) 
 			props.class)
 	}, ...children)
 }
+function drop_shadow_card__h2_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])) {
+	const [props, children] =
+		<[{ class?:string }, tag_dom_T[]]>(
+			Object.getPrototypeOf(arg_a1[0] ?? 0) === Object.prototype
+				? [arg_a1[0], arg_a1.slice(1)]
+				: [{}, arg_a1])
+	return card__h2_({
+		class: class_(
+			drop_shadow__class,
+			props.class)
+	}, ...children)
+}
 function card__h3_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])) {
 	const [props, children] =
 		<[{ class?:string }, tag_dom_T[]]>(
@@ -831,6 +895,18 @@ function card__h3_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])) 
 		class: class_(
 			'inline',
 			'font-bold',
+			props.class)
+	}, ...children)
+}
+function drop_shadow_card__h3_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])) {
+	const [props, children] =
+		<[{ class?:string }, tag_dom_T[]]>(
+			Object.getPrototypeOf(arg_a1[0] ?? 0) === Object.prototype
+				? [arg_a1[0], arg_a1.slice(1)]
+				: [{}, arg_a1])
+	return card__h3_({
+		class: class_(
+			drop_shadow__class,
 			props.class)
 	}, ...children)
 }
@@ -884,6 +960,18 @@ function inline__dd_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])
 			props.class)
 	}, ...children)
 }
+function drop_shadow_inline__dd_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])) {
+	const [props, children] =
+		<[{ class?:string }, tag_dom_T[]]>(
+			Object.getPrototypeOf(arg_a1[0] ?? 0) === Object.prototype
+				? [arg_a1[0], arg_a1.slice(1)]
+				: [{}, arg_a1])
+	return inline__dd_({
+		class: class_(
+			drop_shadow__class,
+			props.class)
+	}, ...children)
+}
 function inline__ul_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])) {
 	const [props, children] =
 		<[{ class?:string }, tag_dom_T[]]>(
@@ -895,6 +983,30 @@ function inline__ul_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])
 			'ml-4',
 			'list-disc',
 			'[&>li]:pl-4',
+			props.class,)
+	}, ...children)
+}
+function drop_shadow__span_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])) {
+	const [props, children] =
+		<[{ class?:string }, tag_dom_T[]]>(
+			Object.getPrototypeOf(arg_a1[0] ?? 0) === Object.prototype
+				? [arg_a1[0], arg_a1.slice(1)]
+				: [{}, arg_a1])
+	return span_({
+		class: class_(
+			drop_shadow__class,
+			props.class,)
+	}, ...children)
+}
+function drop_shadow__em_(...arg_a1:([{ class?:string }, ...tag_dom_T[]]|tag_dom_T[])) {
+	const [props, children] =
+		<[{ class?:string }, tag_dom_T[]]>(
+			Object.getPrototypeOf(arg_a1[0] ?? 0) === Object.prototype
+				? [arg_a1[0], arg_a1.slice(1)]
+				: [{}, arg_a1])
+	return em_({
+		class: class_(
+			drop_shadow__class,
 			props.class,)
 	}, ...children)
 }
