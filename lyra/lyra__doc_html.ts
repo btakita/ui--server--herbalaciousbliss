@@ -236,9 +236,12 @@ export function lyra__doc_html_($p:props_T) {
 					'row-start-2',
 					'lg:row-start-4',
 					'col-start-1',
-					'col-span-3',
+					'col-span-5',
+					'sm:col-span-3',
 					'lg:col-span-2',
 					'lg:row-span-4',
+					'p-4',
+					'sm:p-0',
 					'text-white',)
 			}, [
 				div_({
@@ -250,10 +253,14 @@ export function lyra__doc_html_($p:props_T) {
 						'w-full',
 						'h-full',
 						'bg-gray-950',
-						'opacity-60',)
+						'opacity-80',
+						'sm:opacity-60',
+						)
 				}),
 				dl_({
-					class: class_('p-4')
+					class: class_(
+						'p-0',
+						'sm:p-4')
 				}, [
 					dt_([
 						h2_({
@@ -495,12 +502,17 @@ export function lyra__doc_html_($p:props_T) {
 				class: class_(
 					'relative',
 					'z-10',
-					'row-start-2',
+					'row-start-3',
+					'sm:row-start-2',
 					'lg:row-start-4',
-					'col-start-4',
-					'col-span-2',
+					'col-start-1',
+					'sm:col-start-4',
+					'col-span-5',
+					'sm:col-span-2',
 					'lg:col-span-1',
 					'lg:row-span-4',
+					'p-4',
+					'sm:p-0',
 					'text-white')
 			}, [
 				div_({
@@ -512,7 +524,9 @@ export function lyra__doc_html_($p:props_T) {
 						'h-full',
 						'-z-10',
 						'bg-gray-950',
-						'opacity-60',)
+						'opacity-80',
+						'sm:opacity-60',
+						)
 				}),
 				div_({
 					class: class_(
@@ -603,7 +617,8 @@ export function lyra__doc_html_($p:props_T) {
 				class: class_(
 					'relative',
 					'z-10',
-					'row-start-3',
+					'row-start-4',
+					'sm:row-start-3',
 					'lg:row-start-1',
 					'col-span-5',
 					'lg:col-span-2',
@@ -627,13 +642,13 @@ export function lyra__doc_html_($p:props_T) {
 					img_({
 						src: Tea_house_profile_3_09_24_webp,
 						class: class_(
-							'float-right',
-							'lg:float-none',
+							'mx-auto',
+							'sm:mx-0',
+							'sm:float-right',
 							'w-72',
 							'lg:w-36',
 							'lg:h-[211px]',
-							'aspect-auto',
-							'ml-auto',)
+							'aspect-auto',)
 					}),
 				]),
 				dl_({
