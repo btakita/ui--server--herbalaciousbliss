@@ -479,12 +479,112 @@ export function lyra__doc_html_($p:props_T) {
 					'col-start-3',
 					'col-span-1',
 					'row-span-4',
-					'bg-gray-950',
-					'opacity-60',)
+					'text-white')
 			}, [
 				div_({
-					class: class_('text-white')
-				}, 'cell_l1_r0')
+					class: class_(
+						'absolute',
+						'top-0',
+						'left-0',
+						'w-full',
+						'h-full',
+						'-z-10',
+						'bg-gray-950',
+						'opacity-60',)
+				}),
+				div_({
+					class: class_(
+						'my-4',
+						'text-white')
+				}, [
+					h2_({
+						class: class_(
+							'text-xl',
+							'font-bold',
+							'bg-yellow-300',
+							'text-black',
+						)
+					}, [
+						tb_a_({
+							class: class_(
+								'text-blue-600',
+								'visited:text-card-indigo',),
+							href: 'https://docs.google.com/document/d/1_m9kefEV7Na3G34HhtKbCsFzz5ijaAF0XQe9hcHgrw0/edit'
+						}, 'Support this person'),
+						' Project, Org or topic'
+					]),
+					dl_([
+						inline__dt_([
+							card__h3_('Evals'),
+						]),
+						strong_(': '),
+						inline__dd_([
+							tb_a_({
+								href: 'https://forms.gle/nR1Yu8RFKPjMfLir7'
+							}, 'Qualify me & others here')
+						])
+					])
+				]),
+				div_({
+					class: class_('mt-4')
+				}, [
+					inline__dt_([
+						card__h3_('CoNetworking with')
+					]),
+					strong_(': '),
+					inline__dt_(2)
+				]),
+				dt_({
+					class: class_('mt-4')
+				}, [
+					card__h3_({
+						class: class_(
+							'after:content-[\':\']',)
+					}, 'Superpowers')
+				]),
+				dd_([
+					ul_({
+						class: class_(
+							'ml-4',
+							'list-disc',
+							'[&>li]:pl-4'
+						)
+					}, [
+						li_('Alturism'),
+						li_('Innovation'),
+						li_('Creativity'),
+						li_('Empathy'),
+						li_('Leadership'),
+						li_('Sensemaking'),
+						li_('Critical Thinking'),
+						li_('Wisdom'),
+					])
+				]),
+				dt_({
+					class: class_('mt-4')
+				}, [
+					card__h3_({
+						class: class_(
+							'after:content-[\':\']',)
+					}, 'Field Skills')
+				]),
+				dd_([
+					ul_({
+						class: class_(
+							'ml-4',
+							'list-disc',
+							'[&>li]:pl-4'
+						)
+					}, [
+						li_('Reiki Master | Health & Healing'),
+						li_('Reverse Engineer'),
+						li_('Writer | Author'),
+						li_('Master Gardener | Agriculture'),
+						li_('Adaptive Action Design'),
+						li_('Natural Chemist'),
+						li_('Motivational speaker'),
+					])
+				])
 			])
 		)
 	}
