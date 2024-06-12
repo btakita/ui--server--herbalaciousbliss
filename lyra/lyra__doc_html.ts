@@ -653,7 +653,7 @@ export function lyra__doc_html_($p:props_T) {
 						'bg-gradient-to-tl',
 						'from-card-r0-br',
 						'to-card-r0-tl',
-						'opacity-80',
+						'opacity-90',
 						'-z-10',)
 				}),
 				div_([
@@ -824,16 +824,16 @@ export function lyra__doc_html_($p:props_T) {
 											tb_a_({
 												href: 'https://docs.google.com/document/d/15H_-XykD7o4BlQP_pJCJRBTmErOfbmORmvSjNKjA-FM/edit?usp=drivesdk',
 												class: class_(
-													a__class,
-													drop_shadow__class,),
+													'bg-yellow-300',
+													a__class,),
 											}, 'Catalog Subscriptions | Products | Merch')
 										]),
 										li_([
 											tb_a_({
 												href: 'https://docs.google.com/document/d/1sFsc3VqZAw3KmrM3DyfKh1ug6aVhE-FaVzspEXrcpD0/edit?usp=sharing',
 												class: class_(
-													a__class,
-													drop_shadow__class,),
+													'bg-yellow-300',
+													a__class,),
 											}, 'Project portfolio catalog hub | Quests')
 										]),
 									])
@@ -849,7 +849,9 @@ export function lyra__doc_html_($p:props_T) {
 								drop_shadow_inline__dd_([
 									tb_a_({
 										href: 'https://docs.google.com/document/d/1VlSYFmnecQ60IBSnWaw0R7V4dbRK3Da_JN6RO0TTgBc/edit?usp=sharing',
-										class: a__class,
+										class: class_(
+											'bg-yellow-300',
+											a__class,),
 									}, 'Needed list'),
 									' (For barter, trade, or exchange of services)'
 								]),
