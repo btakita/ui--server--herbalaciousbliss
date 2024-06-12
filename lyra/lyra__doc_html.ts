@@ -33,6 +33,7 @@ const a__class = class_(
 const child_a__class = class_(
 	'text-blue-600',
 	'[&>a:visited]:text-card-indigo',)
+/** @see {https://stackoverflow.com/a/74753353/142571} */
 const drop_shadow__class = 'drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]'
 export function lyra__doc_html_($p:props_T) {
 	const { ctx } = $p
