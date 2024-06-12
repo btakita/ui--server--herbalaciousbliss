@@ -859,6 +859,10 @@ export function lyra__doc_html_($p:props_T) {
 						]),
 					])
 				]),
+				img_({
+					class: class_('mt-4'),
+					src: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT-iKCAerPsp1HddcD3DMElYQadTWsLyYi9ARdwa06sJBm06b869RsSfuqxaPj2CHWg6H1W3IiRpr--/pubchart?oid=881994589&format=image',
+				}),
 			])
 		)
 	}
