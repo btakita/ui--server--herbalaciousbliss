@@ -50,10 +50,10 @@
 		"@btakita/domain--server--herbaliciousbliss": "workspace:*",
 		"@btakita/ui--any--herbaliciousbliss": "workspace:*",
 		"@rappstack/domain--server": "workspace:*",
-		"ctx-core": "^7.2.24",
-		"relementjs": "^0.80.23",
-		"rebuildjs": "^0.70.33",
-		"relysjs": "^1.21.59"
+		"ctx-core": "^7.2.25",
+		"relementjs": "^0.80.24",
+		"rebuildjs": "^0.70.34",
+		"relysjs": "^1.21.60"
 	},
 	"devDependencies": {
 		"bun-types": "latest"
